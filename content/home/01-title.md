@@ -86,6 +86,7 @@ outputs = ["Reveal"]
 * Visual Studio Code (https://code.visualstudio.com/download)
 * Git (https://git-scm.com/downloads)
 * All-in-one bundle (TODO: Link)
+![git](images/git.png)
 
 {{% note %}}
 35m
@@ -108,7 +109,6 @@ outputs = ["Reveal"]
 {{% /note %}}
 
 ---
-TODO: Sub of workshop template
 
 * Clone the codebase from your fork
 * Open git bash
