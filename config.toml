@@ -1,0 +1,11 @@
+# baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Modern Software Development Workflows"
+
+
+theme = "reveal-hugo"
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
