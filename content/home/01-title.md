@@ -82,9 +82,9 @@ outputs = ["Reveal"]
 ---
 ### Prerequisites
 
-* Git (https://git-scm.com/downloads)
 * Node.js (http://nodejs.org/en/download)
 * Visual Studio Code (https://code.visualstudio.com/download)
+* Git (https://git-scm.com/downloads)
 * All-in-one bundle (TODO: Link)
 
 {{% note %}}
@@ -95,11 +95,6 @@ outputs = ["Reveal"]
   * How many with teams with more than two promgramming members?
 
 {{% /note %}}
-
----
-#### Git installation (sub of Prerequisites)
-
-TODO: Screenshots of preferable choices
 
 ---
 #### Workshop Template
@@ -119,7 +114,7 @@ TODO: Sub of workshop template
 * Open git bash
 
 ```bash
-git clone git@gitlab.com:<your-username>/sd-workshop.git
+git clone https://gitlab.com/<your-username>/sd-workshop.git
 cd sd-workshop
 npm install
 ```
@@ -140,7 +135,7 @@ npm install
 50m
 
 * Open local copy in VS Code
-* Intro to problem and code structure
+* Intro to problem and code structure. Show them values.
 * Show around git features of VS Code - branch, push, gutter
 * Run program
 * Explain and run tests
@@ -223,6 +218,10 @@ npm run lint
 
 {{% fragment %}}
 * Add missing semicolons, and commit again
+
+```bash
+./node_modules/.bin/eslint --fix .
+```
 {{% /fragment %}}
 
 {{% note %}}
