@@ -106,7 +106,7 @@ TODO: Screenshots of preferable choices
 
 * Create a gitlab.com account
 * Visit https://gitlab.com/improwised/sd-workshop, and hit "Fork" button
-![programmer-time](images/fork.png)
+![fork](images/fork.png)
 
 {{% note %}}
 40m
@@ -274,7 +274,7 @@ git push origin <branch-name>
 * Watch CI job run and succeed
 
 {{% note %}}
-70m
+85m
 
 * Role of merge requests
   * Code reviews
@@ -290,7 +290,6 @@ git push origin <branch-name>
 
 Rakshit Menpara
 
-[twitter.com/deltasquare4](https://twitter.com/deltasquare4)
-
 [improwised.com](https://www.improwised.com)
 
+Feedback: [http://bit.ly/sd-workshop](http://bit.ly/sd-workshop)
