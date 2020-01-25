@@ -269,7 +269,7 @@ if (!amount || amount <= 0 ||
    !interestRate || interestRate <= 0) {
   throw new Error(`wrong parameters: ${amount} ${installmentsNumber} ${interestRate}`)
 }
-````
+```
 {{% fragment %}}
 Commit and push
 
