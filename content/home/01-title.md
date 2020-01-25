@@ -1,12 +1,15 @@
 +++
-title = "My presentation"
+title = "Modern Software Development"
 outputs = ["Reveal"]
 +++
 
-# Modern Software Development Workflows
+## Modern Software Development
+
+Slides: [http://bit.ly/msd-workshop](http://bit.ly/msd-workshop)
 
 {{% note %}}
 * Who am I?
+* What we do at Improwised Technologies.
 * Who are you? Which semester?
 * Why this workshop?
   * Final year projects are same over last decade I have been working with students
@@ -17,24 +20,21 @@ outputs = ["Reveal"]
 ---
 ## Introduction
 
-* How to prototype fully functional software fast
-* Utilise tools and automation to make them do your work for you
-
-{{% fragment %}}#### But first, let's bust some myths {{% /fragment %}}
+* What makes a good software
+* How to prototype fully functional software quickly
+* Utilise free and OSS tools to make them do your work for you
 
 {{% note %}}
 5m
 {{% /note %}}
 
 ---
-{{< markdown >}}
-#### Misconceptions About a Programmer's Job
+### Programming Myths
 
-<!-- .slide: style="color:red" -->
-* {{% fragment %}}Programmers sit all day and write code{{% /fragment %}}
-* {{% fragment %}}Most important skill for a programmer is knowledge of programming language{{% /fragment %}}
-* {{% fragment %}}Testing is not a programmer's job, it's a tester's job{{% /fragment %}}
-* {{% fragment %}}What you learn in college is mostly obsolete{{% /fragment %}}
+* Programmers sit all day and write code
+* Most important skill for a programmer is knowledge of programming language
+* Testing is not a programmer's job, it's a tester's job
+* What you learn in college is mostly obsolete
 
 {{% note %}}
 15m
@@ -55,10 +55,53 @@ outputs = ["Reveal"]
 
 {{% /note %}}
 
-{{< /markdown >}}
+---
+### Programming is like Writing
+
+* Documentation -> Humans. Code -> Computers.
+* What makes a good writer?
+  * Knowledge of English?
+  * Ability to type fast?
+  * Knowledge of MS Word/Google Docs?
+
+**No.**
+
+{{% note %}}
+20m
+
+* All of the above are necessary, but not sufficient to be a good writer.
+* Most people focus on languages, tools, and frameworks instead of patterns and processes
+* Like a well-written story, well-written software is art.
+
+What makes a good programmer then?
+
+* Understanding and modeling the right problem: Solving a wrong problem is more detrimental than not doing anything.
+* Communication - working on a team requires communicating your ideas and understanding other people's ideas
+* Data Structures, Algorithms, and Design patterns - Data structures are like vocabulary. Many smart people before us have worked out efficient ways to solve certain problems. Why reinvent the wheel? "Those who do not learn history are doomed to repeat it".
+* Simplicity of solution - The best code is no code at all
+
+{{% /note %}}
 
 ---
-#### Version Control Systems
+### Prerequisites
+
+* Node.js (http://nodejs.org/en/download)
+* Visual Studio Code (https://code.visualstudio.com/download)
+* Git (https://git-scm.com/downloads)
+
+![git](images/git.png)
+
+{{% note %}}
+35m
+
+* How many of you have built a software, however small?
+  * How many of you have built it as part of a team?
+  * How many with teams with more than two promgramming members?
+
+{{% /note %}}
+
+---
+#### Revision Control
 
 * Collaboration
 * Accurate version tracking, and restoring to previous versions
@@ -75,37 +118,18 @@ outputs = ["Reveal"]
 * Flexible workflows
 
 {{% note %}}
-20m
-{{% /note %}}
-
-
----
-### Prerequisites
-
-* Node.js (http://nodejs.org/en/download)
-* Visual Studio Code (https://code.visualstudio.com/download)
-* Git (https://git-scm.com/downloads)
-* All-in-one bundle (TODO: Link)
-![git](images/git.png)
-
-{{% note %}}
-35m
-
-* How many of you have built a software, however small?
-  * How many of you have built it as part of a team?
-  * How many with teams with more than two promgramming members?
-
+38m
 {{% /note %}}
 
 ---
 #### Workshop Template
 
-* Create a gitlab.com account
-* Visit https://gitlab.com/improwised/sd-workshop, and hit "Fork" button
-![fork](images/fork.png)
+* Create a github.com account
+* Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
+* Log into CircleCI using Github, and add the above fork as a project to enable automatic builds.
 
 {{% note %}}
-40m
+45m
 {{% /note %}}
 
 ---
@@ -114,13 +138,13 @@ outputs = ["Reveal"]
 * Open git bash
 
 ```bash
-git clone https://gitlab.com/<your-username>/sd-workshop.git
-cd sd-workshop
+git clone https://github.com/<your-username>/emi-calculator.git
+cd emi-calculator
 npm install
 ```
 
 {{% note %}}
-45m
+50m
 
 * How many of you use command line? Dos or linux shell?
 * How many of you are afraid of command line? Why?
@@ -132,7 +156,7 @@ npm install
 (Both the workshop codebase and VS Code)
 
 {{% note %}}
-50m
+55m
 
 * Open local copy in VS Code
 * Intro to problem and code structure. Show them values.
@@ -148,7 +172,7 @@ npm install
 {{% fragment %}} Does it work? Is anything missing? {{% /fragment %}}
 
 {{% note %}}
-55m
+60m
 
 * Why automated tests?
   * Repititive, so more likely to have lapses without it
@@ -169,14 +193,12 @@ git checkout -b <branch-name>
 
 {{% fragment %}}
 
-Add new test case to `tests/bill-split.test.js`
+Add new test case to `tests/emi.test.js`
 
 ```js
-test('Negative currency should not be allowed', () => {
-    expect(() => {
-        BillSplitter.split(-100, 2)
-    }).toThrow()
-})
+test('Should throw an error on negative interest rate', () => {
+  expect(() => EMI.Loan(10000, -1, 10)).toThrowError('wrong parameters: 10000 -1 10')
+});
 ```
 {{% /fragment %}}
 
@@ -200,11 +222,12 @@ npm test
 #### Negative test case
 
 {{% fragment %}}
+
 Commit
 
 ```bash
 git add tests/*.test.js
-git commit -m "Added negative test case for bill-split"
+git commit -m "Add test to validate whether Loan() allows negative values"
 ```
 {{% /fragment %}}
 
@@ -217,7 +240,7 @@ npm run lint
 {{% /fragment %}}
 
 {{% fragment %}}
-* Add missing semicolons, and commit again
+* Remove extra semicolons, and commit again
 
 ```bash
 ./node_modules/.bin/eslint --fix .
@@ -240,22 +263,19 @@ npm run lint
 #### Fix code
 
 ```js
-module.exports = {
-    split: function (totalBill, people) {
-        if (totalBill >= 0) {
-            return Math.ceil(totalBill / people);
-        } else {
-            throw new Error('Bill value cannot be negative');
-        }
-    },
-};
-```
+// function Loan
+if (!amount || amount <= 0 ||
+   !installmentsNumber || installmentsNumber <= 0 ||
+   !interestRate || interestRate <= 0) {
+  throw new Error(`wrong parameters: ${amount} ${installmentsNumber} ${interestRate}`)
+}
+````
 {{% fragment %}}
 Commit and push
 
 ```bash
-git add src/bill-split.js
-git commit -m "Disallow negative bill value"
+git add src/emi.js
+git commit -m "Disallow negative value for all parameters"
 git push origin <branch-name>
 ```
 {{% /fragment %}}
@@ -269,7 +289,7 @@ git push origin <branch-name>
 ---
 #### Contributing Back
 
-* Create a Merge Request from `<branch-name>` to `master`
+* Create a Pull Request from `<branch-name>` to `master`
 * Watch CI job run and succeed
 
 {{% note %}}
@@ -285,9 +305,62 @@ git push origin <branch-name>
 {{% /note %}}
 
 ---
+## Open Source Software
+
+* OSS Projects are not just Software, they are also communities
+* Opportunity to learn from code written by world-class developers
+* Learn how big software is built and managed.
+* All of the above, for free!
+* Try your hand at contributing to existing OSS Projects
+  * https://firstcontributions.github.io/
+  * https://github.com/MunGell/awesome-for-beginners
+
+{{% note %}}
+90m
+
+* How many of you have used open source software before?
+* Communities are amazing if you think about it. People who don't know each other work together to build and improve the same piece of code.
+{{% /note %}}
+
+---
+### Open Source all your projects
+
+* You learn from each other.
+* You get to practice how to build software the way startups and large companies build it.
+* You get to use state-of-the-art tooling. For free!
+* It's like a resume. Your work speaks for you.
+
+{{% note %}}
+92m
+
+{{% /note %}}
+
+---
+### Project Tips
+
+* Address a need. Build something that you wish existed.
+* Don't jump directly to writing code. Understand the problem.
+* Use Github and other free tools. Some of the most useful ones are:
+  * Zeit Now (Build Previews and zero-config Serverless Deployments)
+  * AWS/GCP/Azure has free tier/credits for new registrations
+  * Firebase (Mobile app backend)
+* Use frameworks/boilerplate wherever feasible.
+
+{{% note %}}
+95m
+
+* Choosing Problem: Content/data driven problems are common. Gather real data where possible.
+* Pick something that requires more deliberation than simple CRUD operations.
+* Boilerplates/Frameworks make prototyping faster.
+
+{{% /note %}}
+
+---
 ### Thanks!
 
 Rakshit Menpara
+
+CTO, Improwised Technologies Private Limited
 
 [improwised.com](https://www.improwised.com)
 

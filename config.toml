@@ -1,7 +1,6 @@
-# baseURL = "http://example.org/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Modern Software Development Workflows"
-
 
 theme = "reveal-hugo"
 
@@ -9,3 +8,7 @@ theme = "reveal-hugo"
 baseName = "index"
 mediaType = "text/html"
 isHTML = true
+
+[params.reveal_hugo]
+theme = "night"
+highlight_theme = "solarized-dark"
