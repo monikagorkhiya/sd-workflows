@@ -33,8 +33,8 @@ Slides: [http://bit.ly/msd-workshop](http://bit.ly/msd-workshop)
 
 * Programmers sit all day and write code
 * Most important skill for a programmer is knowledge of programming language
-* Testing is not a programmer's job, it's a tester's job
-* What you learn in college is mostly obsolete
+* Programmers program, testers test
+* Most theory we learn as part of curriculum is not useful
 
 {{% note %}}
 15m
@@ -127,6 +127,12 @@ What makes a good programmer then?
 * Create a github.com account
 * Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
 * Log into CircleCI using Github, and add the above fork as a project to enable automatic builds.
+* Configure local git to add your name and email
+
+```bash
+git config --global user.name "<Your Name>"
+git config --global user.email "<Your Email Address>"
+```
 
 {{% note %}}
 45m
@@ -243,7 +249,7 @@ npm run lint
 * Remove extra semicolons, and commit again
 
 ```bash
-./node_modules/.bin/eslint --fix .
+npm run lint-fix
 ```
 {{% /fragment %}}
 
@@ -358,10 +364,12 @@ git push origin <branch-name>
 ---
 ### Thanks!
 
-Rakshit Menpara
+Rakshit Menpara, Munir Khakhi
 
-CTO, Improwised Technologies Private Limited
+Improwised Technologies Private Limited
 
 [improwised.com](https://www.improwised.com)
 
 Feedback: [http://bit.ly/sd-workshop](http://bit.ly/sd-workshop)
+
+We are hiring: [https://www.improwised.com/careers](https://www.improwised.com/careers)
