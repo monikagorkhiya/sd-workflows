@@ -347,8 +347,8 @@ git push origin <branch-name>
 * Address a need. Build something that you wish existed.
 * Don't jump directly to writing code. Understand the problem.
 * Use Github and other free tools. Some of the most useful ones are:
-  * Zeit Now (Build Previews and zero-config Serverless Deployments)
-  * AWS/GCP/Azure has free tier/credits for new registrations
+  * [Vercel](https://vercel.com/) & Github Pages (Build Previews and zero-config Serverless Deployments)
+  * AWS/GCP/Azure/Oracle has free tier/credits for new registrations
   * Firebase (Mobile app backend)
 * Use frameworks/boilerplate wherever feasible.
 
@@ -364,7 +364,7 @@ git push origin <branch-name>
 ---
 ### Thanks!
 
-Rakshit Menpara, Munir Khakhi
+Munir Khakhi, Divya Sonara, Vatsal Chauhan
 
 Improwised Technologies Private Limited
 
