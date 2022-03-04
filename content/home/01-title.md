@@ -124,7 +124,7 @@ What makes a good programmer then?
 ---
 #### Workshop Template
 
-* Create a github.com account
+* Create a github.com account and generate [token](https://github.com/settings/tokens)
 * Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
 * Log into CircleCI using Github, and add the above fork as a project to enable automatic builds.
 * Configure local git to add your name and email
