@@ -69,12 +69,8 @@ MIT
 
 ## TODO
 
-* Add careers page at last
-* Publish Presentation to Now
-* Link presentation inside itself so that others can follow
-* An exercise repo in github where people contribute their name and it shows up in a list on a continuously deployed website
-* Add prerequisites to a USB drive
-
+* Replace CircleCI with Github Actions
+* Add description of settings app in the slides
 
 ## Extra
 
