@@ -14,7 +14,7 @@ Slides: [http://bit.ly/msd-workshop](http://bit.ly/msd-workshop)
 * Who are you? Which semester?
 * Why this workshop?
   * Final year projects are same over last decade I have been working with students
-  * Too much "gap" to fill between profrssional work and academia
+  * Too much "gap" to fill between professional work and academia
   * I'd like you to focus on grander projects, and not worry about the nitty-gritty stuff
 {{% /note %}}
 
