@@ -132,7 +132,7 @@ What makes a good programmer then?
 
 ---
 #### Workshop Template Setup
-* Log into CircleCI using Github, and add the above fork as a project to enable automatic builds.
+
 * Configure local git to add your name and email
 
 ```bash
@@ -427,9 +427,9 @@ git push origin <branch-name>
 ---
 ### Thanks!
 
-**Presented By:** Munir, Rakshit
+**Presented By:** Munir
 
-**Assisted By:** Dipika, Divya, Harikrushna, Jeel, Monika, Payal, Pratik, Shailesh, Shubhashree, Shyam
+**Assisted By:** Tapan, Monika, Yogesh, Payal, Nirav, Shaktiraj 
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
