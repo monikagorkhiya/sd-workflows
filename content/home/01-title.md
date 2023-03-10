@@ -9,11 +9,12 @@ Slides: [http://bit.ly/msd-workshop](http://bit.ly/msd-workshop)
 
 {{% note %}}
 * Who am I?
+* What makes me qualified to run this workshop?
 * What we do at Improwised Technologies.
 * Who are you? Which semester?
 * Why this workshop?
   * Final year projects are same over last decade I have been working with students
-  * Too much "gap" to fill between profrssional work and academia
+  * Too much "gap" to fill between professional work and academia
   * I'd like you to focus on grander projects, and not worry about the nitty-gritty stuff
 {{% /note %}}
 
@@ -88,8 +89,7 @@ What makes a good programmer then?
 * Node.js (http://nodejs.org/en/download)
 * Visual Studio Code (https://code.visualstudio.com/download)
 * Git (https://git-scm.com/downloads)
-
-![git](images/git.png)
+* Github CLI (https://cli.github.com/)
 
 {{% note %}}
 35m
@@ -122,11 +122,17 @@ What makes a good programmer then?
 {{% /note %}}
 
 ---
-#### Workshop Template
+#### Workshop Template Setup
 
 * Create a github.com account and generate [token](https://github.com/settings/tokens)
 * Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
-* Log into CircleCI using Github, and add the above fork as a project to enable automatic builds.
+* Enable Github Pages on your fork of the template.
+
+![Github Pages](images/configure_github_pages.png)
+
+---
+#### Workshop Template Setup
+
 * Configure local git to add your name and email
 
 ```bash
@@ -141,16 +147,16 @@ git config --global user.email "<Your Email Address>"
 ---
 
 * Clone the codebase from your fork
-* Open git bash
+* Open terminal/git bash/powershell
 
 ```bash
-git clone https://github.com/<your-username>/emi-calculator.git
+gh repo clone <your-username>/emi-calculator
 cd emi-calculator
 npm install
 ```
 
 {{% note %}}
-50m
+55m
 
 * How many of you use command line? Dos or linux shell?
 * How many of you are afraid of command line? Why?
@@ -162,7 +168,7 @@ npm install
 (Both the workshop codebase and VS Code)
 
 {{% note %}}
-55m
+60m
 
 * Open local copy in VS Code
 * Intro to problem and code structure. Show them values.
@@ -175,10 +181,29 @@ npm install
 ---
 #### Unit Tests
 
-{{% fragment %}} Does it work? Is anything missing? {{% /fragment %}}
+```bash
+# Linux
+npm run test
+# Windows
+npm run test-win
+```
+{{% fragment %}}
+Does it work? Is anything missing?
+{{% /fragment %}}
+
+{{% fragment %}}
+Off-by-one error in the loop
+
+```diff
+- for (let i = 0; i <= installmentsNumber; i++) {
++ for (let i = 0; i < installmentsNumber; i++) {
+```
+
+Run the tests again!
+{{% /fragment %}}
 
 {{% note %}}
-60m
+65m
 
 * Why automated tests?
   * Repititive, so more likely to have lapses without it
@@ -212,14 +237,15 @@ test('Should throw an error on negative interest rate', () => {
 Run tests
 
 ```bash
-npm test
+npm run test
+npm run test-win
 ```
 
 {{% /fragment %}}
 
 
 {{% note %}}
-60m
+75m
 
 * Run tests, and observe failing test
 {{% /note %}}
@@ -254,7 +280,7 @@ npm run lint-fix
 {{% /fragment %}}
 
 {{% note %}}
-65m
+85m
 
 * Run tests, and observe failing test
 * Attempt to commit code
@@ -288,7 +314,7 @@ git push origin <branch-name>
 
 
 {{% note %}}
-70m
+95m
 
 {{% /note %}}
 
@@ -299,7 +325,7 @@ git push origin <branch-name>
 * Watch CI job run and succeed
 
 {{% note %}}
-85m
+100m
 
 * Role of merge requests
   * Code reviews
@@ -307,7 +333,44 @@ git push origin <branch-name>
 * Continuous Integration
   * Automated linting, testing and even deploying
   * Push and forget. You get an email if something goes wrong.
-  * Gitlab CI manifest
+  * CircleCI manifest
+{{% /note %}}
+
+---
+#### Continuous Deployment
+
+* Observe the deployment at [https://\<username\>.github.io/emi-calculator/](https://improwised.github.io/emi-calculator/)
+* Observe the Deployment Pipeline at [https://github.com/\<username\>/emi-calculator/actions/workflows/pages/pages-build-deployment](https://github.com/Improwised/emi-calculator/actions/workflows/pages/pages-build-deployment)
+
+{{% note %}}
+105m
+
+{{% /note %}}
+
+---
+#### Bonus
+
+* Dependabot Configuration (.github/dependabot.yml)
+* [Probot Settings Github Application](https://probot.github.io/apps/settings/) (.github/settings.yml)
+
+![Settings](images/settings_github_app.png)
+
+{{% note %}}
+110m
+
+{{% /note %}}
+
+---
+#### Summary
+
+* Implement new features in parallel in their own git branches.
+* Use linting and pre-commit hooks to ensure standard and error-free code.
+* Utilize Automated Tests and Continuous Integration/Deployment to record a repeatable test-build-deploy process.
+* Use Dependabot and auto-merge to ensure your application is always patched against known security vulnerabilities.
+
+{{% note %}}
+112m
+
 {{% /note %}}
 
 ---
@@ -322,7 +385,7 @@ git push origin <branch-name>
   * https://github.com/MunGell/awesome-for-beginners
 
 {{% note %}}
-90m
+115m
 
 * How many of you have used open source software before?
 * Communities are amazing if you think about it. People who don't know each other work together to build and improve the same piece of code.
@@ -337,7 +400,7 @@ git push origin <branch-name>
 * It's like a resume. Your work speaks for you.
 
 {{% note %}}
-92m
+117m
 
 {{% /note %}}
 
@@ -353,7 +416,7 @@ git push origin <branch-name>
 * Use frameworks/boilerplate wherever feasible.
 
 {{% note %}}
-95m
+120m
 
 * Choosing Problem: Content/data driven problems are common. Gather real data where possible.
 * Pick something that requires more deliberation than simple CRUD operations.
@@ -364,12 +427,11 @@ git push origin <branch-name>
 ---
 ### Thanks!
 
-Munir Khakhi, Divya Sonara, Vatsal Chauhan
+**Presented By:** Monika Gorakhiya, Munir Khakhi
+
+**Assisted By:** Tapan, Payal, Nirav, Shaktiraj, Jay, Devarshi 
 
 Improwised Technologies Private Limited
-
 [improwised.com](https://www.improwised.com)
 
 Feedback: [http://bit.ly/sd-workshop](http://bit.ly/sd-workshop)
-
-We are hiring: [https://www.improwised.com/careers](https://www.improwised.com/careers)
