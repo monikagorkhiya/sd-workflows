@@ -429,7 +429,7 @@ git push origin <branch-name>
 
 **Presented By:** Monika Gorakhiya, Munir Khakhi
 
-**Assisted By:** Tapan, Payal, Nirav, Shaktiraj, Jay, Devarshi 
+**Assisted By:** Nirav, Shivani, Jay, Devarshi 
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
