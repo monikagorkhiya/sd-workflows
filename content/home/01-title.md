@@ -124,7 +124,7 @@ What makes a good programmer then?
 ---
 #### Workshop Template Setup
 
-* Create a github.com account and generate [token](https://github.com/settings/tokens)
+* Create a github.com account.
 * Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
 * Enable Github Pages on your fork of the template.
 
@@ -150,6 +150,7 @@ git config --global user.email "<Your Email Address>"
 * Open terminal/git bash/powershell
 
 ```bash
+gh auth login -p https -h github.com -w
 gh repo clone <your-username>/emi-calculator
 cd emi-calculator
 npm install
