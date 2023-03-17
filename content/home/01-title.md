@@ -126,6 +126,10 @@ What makes a good programmer then?
 
 * Create a github.com account.
 * Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
+* After fork, you will see your username instead of "improwised" in above URL
+
+---
+
 * Enable Github Pages on your fork of the template.
 
 ![Github Pages](images/configure_github_pages.png)
@@ -430,7 +434,7 @@ git push origin <branch-name>
 
 **Presented By:** Monika Gorakhiya, Munir Khakhi
 
-**Assisted By:** Nirav, Shivani, Jay, Devarshi 
+**Assisted By:** Aniket, Chintan, Khushal, Vatsal
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
