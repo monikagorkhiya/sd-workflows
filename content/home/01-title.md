@@ -432,9 +432,9 @@ git push origin <branch-name>
 ---
 ### Thanks!
 
-**Presented By:** Monika Gorakhiya, Munir Khakhi
+**Presented By:** Munir Khakhi
 
-**Assisted By:** Aniket, Chintan, Khushal, Nirav, Vatsal
+**Assisted By:** Yogesh, Jeel, Hussain, Nakshi, Vatsal, Shailja, Ami, Bhautik, Nirav, Bhoomi, Shivani, Shaktirajsinh, Chintan, Pratik, Khushal, Aniket
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
