@@ -434,7 +434,7 @@ git push origin <branch-name>
 
 **Presented By:** Munir Khakhi
 
-**Assisted By:** Yogesh, Jeel, Hussain, Nakshi, Vatsal, Shailja, Ami, Bhautik, Nirav, Bhoomi, Shivani, Shaktirajsinh, Chintan, Pratik, Khushal, Aniket
+**Assisted By:** Yogesh, Jeel, Hussain, Nakshi, Vatsal, Shailja, Ami, Bhautik, Nirav, Bhoomi, Shivani, Shaktirajsinh, Chintan, Pratik, Khushal, Aniket, Chintan, Tapan, Lalit, Bhavin
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
