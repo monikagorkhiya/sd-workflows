@@ -352,7 +352,7 @@ git push origin <branch-name>
 
 
 * Observe the deployment at [https://\<username\>.github.io/emi-calculator/](https://improwised.github.io/emi-calculator/) - Only work in github.
-* Observe the Deployment Pipeline at [https://git.pride.improwised.dev/monikagorkhiya/emi-calculator/actions](https://git.pride.improwised.dev/monikagorkhiya/emi-calculator/actions)
+* Observe the Deployment Pipeline at [https://git.pride.improwised.dev/<username\>/emi-calculator/actions](https://git.pride.improwised.dev/<username\>/emi-calculator/actions)
 
 {{% note %}}
 105m
