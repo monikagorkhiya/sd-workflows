@@ -5,7 +5,7 @@ outputs = ["Reveal"]
 
 ## Modern Software Development
 
-Slides: [https://bit.ly/workshop-msd](https://bit.ly/workshop-msd)
+Slides: [https://monikagorkhiya.github.io/sd-workflows](https://monikagorkhiya.github.io/sd-workflows)
 
 {{% note %}}
 * Who am I?
