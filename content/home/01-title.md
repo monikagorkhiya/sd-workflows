@@ -125,17 +125,17 @@ What makes a good programmer then?
 #### Workshop Template Setup
 
 * Create a github.com account.
-* Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
-* After fork, you will see your username instead of "improwised" in above URL
+* Visit https://git.pride.improwised.dev/monikagorkhiya/emi-calculator, and hit "Fork" button
+* After fork, you will see your username instead of "monikagorkhiya" in above URL
 
 ---
 
-* Enable Github Pages on your fork of the template.
+* Enable Github Pages on your fork of the template.(Only work with Github)
 
 ![Github Pages](images/configure_github_pages.png)
 
 ---
-#### Workshop Template Setup
+#### Workshop Template Setup (if work with github)
 
 * Configure local git to add your name and email
 
@@ -144,18 +144,21 @@ git config --global user.name "<Your Name>"
 git config --global user.email "<Your Email Address>"
 ```
 
+* Clone the codebase from your fork
+```bash
+gh auth login -p https -h github.com -w
+```
+
 {{% note %}}
 45m
 {{% /note %}}
 
 ---
-
 * Clone the codebase from your fork
 * Open terminal/git bash/powershell
 
 ```bash
-gh auth login -p https -h github.com -w
-gh repo clone <your-username>/emi-calculator
+gh repo clone https://git.pride.improwised.dev/<your-username>/emi-calculator.git
 cd emi-calculator
 npm install
 ```
@@ -197,7 +200,7 @@ Does it work? Is anything missing?
 {{% /fragment %}}
 
 {{% fragment %}}
-Off-by-one error in the loop
+Off-by-one error in the loop in src/emi.js
 
 ```diff
 - for (let i = 0; i <= installmentsNumber; i++) {
@@ -263,8 +266,9 @@ npm run test-win
 Commit
 
 ```bash
+git add src/emi.js
 git add tests/*.test.js
-git commit -m "Add test to validate whether Loan() allows negative values"
+git commit -m "Add test to validate whether Loan() allows negative values and fix other testcase"
 ```
 {{% /fragment %}}
 
@@ -311,6 +315,8 @@ if (!amount || amount <= 0 ||
 Commit and push
 
 ```bash
+git status
+git add tests/*.test.js
 git add src/emi.js
 git commit -m "Disallow negative value for all parameters"
 git push origin <branch-name>
@@ -326,7 +332,7 @@ git push origin <branch-name>
 ---
 #### Contributing Back
 
-* Create a Pull Request from `<branch-name>` to `master`
+* Create a Pull Request from `<branch-name>` to `main`
 * Watch CI job run and succeed
 
 {{% note %}}
@@ -344,24 +350,12 @@ git push origin <branch-name>
 ---
 #### Continuous Deployment
 
-* Observe the deployment at [https://\<username\>.github.io/emi-calculator/](https://improwised.github.io/emi-calculator/)
-* Observe the Deployment Pipeline at [https://github.com/\<username\>/emi-calculator/actions/workflows/pages/pages-build-deployment](https://github.com/Improwised/emi-calculator/actions/workflows/pages/pages-build-deployment)
+
+* Observe the deployment at [https://\<username\>.github.io/emi-calculator/](https://improwised.github.io/emi-calculator/) - Only work in github.
+* Observe the Deployment Pipeline at [https://git.pride.improwised.dev/monikagorkhiya/emi-calculator/actions](https://git.pride.improwised.dev/monikagorkhiya/emi-calculator/actions)
 
 {{% note %}}
 105m
-
-{{% /note %}}
-
----
-#### Bonus
-
-* Dependabot Configuration (.github/dependabot.yml)
-* [Probot Settings Github Application](https://probot.github.io/apps/settings/) (.github/settings.yml)
-
-![Settings](images/settings_github_app.png)
-
-{{% note %}}
-110m
 
 {{% /note %}}
 
@@ -438,5 +432,3 @@ git push origin <branch-name>
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
-
-Feedback: [https://monikagorkhiya.github.io/sd-workflows/](https://monikagorkhiya.github.io/sd-workflows/)
