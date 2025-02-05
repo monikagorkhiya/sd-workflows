@@ -432,7 +432,7 @@ git push origin <branch-name>
 ---
 ### Thanks!
 
-**Presented By:** Munir Khakhi
+**Presented By:** Monika Gorkhiya
 
 **Assisted By:** Yogesh, Jeel, Hussain, Nakshi, Vatsal, Shailja, Ami, Bhautik, Nirav, Bhoomi, Shivani, Shaktirajsinh, Chintan, Pratik, Khushal, Aniket, Chintan, Tapan, Lalit, Bhavin
 
