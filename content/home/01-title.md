@@ -5,7 +5,7 @@ outputs = ["Reveal"]
 
 ## Modern Software Development
 
-Slides: [https://monikagorkhiya.github.io/sd-workflows](https://monikagorkhiya.github.io/sd-workflows)
+Slides: [https://bit.ly/workshopMSD](https://bit.ly/workshopMSD)
 
 {{% note %}}
 * Who am I?
@@ -125,17 +125,17 @@ What makes a good programmer then?
 #### Workshop Template Setup
 
 * Create a github.com account.
-* Visit https://git.pride.improwised.dev/monikagorkhiya/emi-calculator, and hit "Fork" button
-* After fork, you will see your username instead of "monikagorkhiya" in above URL
+* Visit https://github.com/improwised/emi-calculator, and hit "Fork" button
+* After fork, you will see your username instead of "improwised" in above URL
 
 ---
 
-* Enable Github Pages on your fork of the template.(Only work with Github)
+* Enable Github Pages on your fork of the template.
 
 ![Github Pages](images/configure_github_pages.png)
 
 ---
-#### Workshop Template Setup (if work with github)
+#### Workshop Template Setup
 
 * Configure local git to add your name and email
 
@@ -144,21 +144,18 @@ git config --global user.name "<Your Name>"
 git config --global user.email "<Your Email Address>"
 ```
 
-* Clone the codebase from your fork
-```bash
-gh auth login -p https -h github.com -w
-```
-
 {{% note %}}
 45m
 {{% /note %}}
 
 ---
+
 * Clone the codebase from your fork
 * Open terminal/git bash/powershell
 
 ```bash
-gh repo clone https://git.pride.improwised.dev/<your-username>/emi-calculator.git
+gh auth login -p https -h github.com -w
+gh repo clone <your-username>/emi-calculator
 cd emi-calculator
 npm install
 ```
@@ -200,7 +197,7 @@ Does it work? Is anything missing?
 {{% /fragment %}}
 
 {{% fragment %}}
-Off-by-one error in the loop in src/emi.js
+Off-by-one error in the loop
 
 ```diff
 - for (let i = 0; i <= installmentsNumber; i++) {
@@ -266,9 +263,8 @@ npm run test-win
 Commit
 
 ```bash
-git add src/emi.js
 git add tests/*.test.js
-git commit -m "Add test to validate whether Loan() allows negative values and fix other testcase"
+git commit -m "Add test to validate whether Loan() allows negative values"
 ```
 {{% /fragment %}}
 
@@ -316,8 +312,8 @@ Commit and push
 
 ```bash
 git status
-git add tests/*.test.js
 git add src/emi.js
+git add tests/*.test.js
 git commit -m "Disallow negative value for all parameters"
 git push origin <branch-name>
 ```
@@ -332,7 +328,7 @@ git push origin <branch-name>
 ---
 #### Contributing Back
 
-* Create a Pull Request from `<branch-name>` to `main`
+* Create a Pull Request from `<branch-name>` to `master`
 * Watch CI job run and succeed
 
 {{% note %}}
@@ -350,14 +346,14 @@ git push origin <branch-name>
 ---
 #### Continuous Deployment
 
-
-* Observe the deployment at [https://\<username\>.github.io/emi-calculator/](https://improwised.github.io/emi-calculator/) - Only work in github.
-* Observe the Deployment Pipeline at [https://git.pride.improwised.dev/<username\>/emi-calculator/actions](https://git.pride.improwised.dev/<username\>/emi-calculator/actions)
+* Observe the deployment at [https://\<username\>.github.io/emi-calculator/](https://improwised.github.io/emi-calculator/)
+* Observe the Deployment Pipeline at [https://github.com/\<username\>/emi-calculator/actions/workflows/pages/pages-build-deployment](https://github.com/Improwised/emi-calculator/actions/workflows/pages/pages-build-deployment)
 
 {{% note %}}
 105m
 
 {{% /note %}}
+
 
 ---
 #### Summary
@@ -426,9 +422,6 @@ git push origin <branch-name>
 ---
 ### Thanks!
 
-**Presented By:** Monika Gorkhiya
-
-**Assisted By:** Munir,Rakshit
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
