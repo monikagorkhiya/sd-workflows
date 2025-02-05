@@ -434,9 +434,9 @@ git push origin <branch-name>
 
 **Presented By:** Monika Gorkhiya
 
-**Assisted By:** Yogesh, Jeel, Hussain, Nakshi, Vatsal, Shailja, Ami, Bhautik, Nirav, Bhoomi, Shivani, Shaktirajsinh, Chintan, Pratik, Khushal, Aniket, Chintan, Tapan, Lalit, Bhavin
+**Assisted By:** Munir,Rakshit
 
 Improwised Technologies Private Limited
 [improwised.com](https://www.improwised.com)
 
-Feedback: [http://bit.ly/sd-workshop](http://bit.ly/sd-workshop)
+Feedback: [https://monikagorkhiya.github.io/sd-workflows/](https://monikagorkhiya.github.io/sd-workflows/)
